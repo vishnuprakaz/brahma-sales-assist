@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": "T001",
+      "name": "Setup orchestrator agent with uv",
+      "description": "Initialize uv environment for the orchestrator agent, install dependencies from pyproject.toml, and verify main.py runs successfully. The orchestrator uses Google ADK and FastAPI to serve agents.",
+      "feature": null,
+      "component": "Backend",
+      "status": "completed"
+    },
+    {
+      "id": "T002",
+      "name": "Document UI Vision and Architecture",
+      "description": "Create comprehensive UI vision document in ui-context/ covering core philosophy (signal over noise, zero learning curve, context awareness), interaction models (conversational first), layout architecture (dynamic grid, responsive), component standards, accessibility requirements, and design system tokens. Document serves as foundation for all UI development decisions.",
+      "feature": null,
+      "component": "UI",
+      "status": "completed"
+    },
+    {
+      "id": "T003",
+      "name": "Add UI Context Tracking System",
+      "description": "Extend ui-vision.md with concise UI context tracking section covering user interaction tracking, UI state management, agent integration, and performance requirements. Enables natural language commands by providing agents complete awareness of user selections and current UI state.",
+      "feature": null,
+      "component": "UI",
+      "status": "completed"
+    }
+  ]
+}
+

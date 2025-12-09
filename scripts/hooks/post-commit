@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo ""
+echo "✅ Commit successful!"
+echo ""
+
+exit 0
+

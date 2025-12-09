@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Check if code files are being committed
+if ! git diff --cached --name-only | grep -qE '\.(py|js|jsx|ts|tsx|html|css|json)$'; then
+    exit 0
+fi
+
+echo ""
+echo "🤖 CODING AGENT CHECKLIST:"
+echo ""
+echo "□ Updated task in tasks.json"
+echo "□ Updated feature in features.json (if applicable)"
+echo "□ Documented in context folder (ui/ui-context/ or agents/agents-context/)"
+echo "□ Code tested and working"
+echo "□ Removed debug code"
+echo ""
+
+exit 0
+
