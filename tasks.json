@@ -6,7 +6,8 @@
       "description": "Initialize uv environment for the orchestrator agent, install dependencies from pyproject.toml, and verify main.py runs successfully. The orchestrator uses Google ADK and FastAPI to serve agents.",
       "feature": null,
       "component": "Backend",
-      "status": "completed"
+      "status": "completed",
+      "reviewed_status": "completed"
     },
     {
       "id": "T002",
@@ -14,7 +15,8 @@
       "description": "Create comprehensive UI vision document in ui-context/ covering core philosophy (signal over noise, zero learning curve, context awareness), interaction models (conversational first), layout architecture (dynamic grid, responsive), component standards, accessibility requirements, and design system tokens. Document serves as foundation for all UI development decisions.",
       "feature": null,
       "component": "UI",
-      "status": "completed"
+      "status": "completed",
+      "reviewed_status": "completed"
     },
     {
       "id": "T003",
@@ -22,7 +24,8 @@
       "description": "Extend ui-vision.md with concise UI context tracking section covering user interaction tracking, UI state management, agent integration, and performance requirements. Enables natural language commands by providing agents complete awareness of user selections and current UI state.",
       "feature": null,
       "component": "UI",
-      "status": "completed"
+      "status": "completed",
+      "reviewed_status": "completed"
     },
     {
       "id": "T004",
@@ -30,9 +33,89 @@
       "description": "Set up Vite React TypeScript project with Tailwind CSS, shadcn/ui components, TypeScript path mapping, and basic layout structure following UI vision. Create organized folder structure for components, features, hooks, and utilities.",
       "feature": null,
       "component": "UI",
-      "status": "completed"
+      "status": "completed",
+      "reviewed_status": "completed"
+    },
+    {
+      "id": "T005",
+      "name": "Build UI Context Manager",
+      "description": "Create context manager system that tracks all UI state including current page, selected items, visible data, filters, search queries, and recent user actions. Implement in-memory storage with session backup. Must capture events automatically with <1ms overhead and serialize context in <10ms. Export getCurrentContext() function that returns complete UI state for agent consumption.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "completed",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T006",
+      "name": "Create Persistent Input Box Component",
+      "description": "Build floating input box component that stays at bottom of screen. Must support multiple states (idle, focused, processing, error), keyboard shortcuts (Cmd+K to focus, Escape to clear), auto-expand on focus, and show visual indicators during AI processing. Include voice input button placeholder. Component should handle text input and emit events for message submission.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "pending",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T007",
+      "name": "Build Agent Response Panel",
+      "description": "Create sliding panel component that appears from right side when AI is active. Must display streaming text responses, show processing indicators, support dynamic UI elements (cards, buttons, charts), be dismissible by user, and minimize to corner when closed. Panel should not block main canvas (overlay or push content). Include proper animations and transitions.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "pending",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T008",
+      "name": "Implement Message Service for Agent Communication",
+      "description": "Create service layer that handles sending messages to backend agents and receiving responses. Must attach UI context automatically to every message, handle WebSocket connection for streaming responses, manage connection state (connecting, connected, disconnected), implement retry logic, and provide hooks for components to subscribe to agent messages. Include proper error handling and timeout management.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "pending",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T009",
+      "name": "Create Navigation Manager for AI-Controlled Routing",
+      "description": "Build navigation manager that allows AI agents to programmatically navigate the application. Must support commands like 'go to leads', 'show dashboard', 'open settings'. Integrate with React Router, expose API for agent commands, track navigation history, and provide smooth transitions. Should validate navigation targets and handle invalid routes gracefully.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "pending",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T010",
+      "name": "Build Core Layout Structure with Dynamic Grid",
+      "description": "Implement main application layout with Header (logo, search, profile), collapsible Sidebar (icon-only navigation), Main Canvas (12-column responsive grid), and proper spacing for Input Box and Agent Panel. Layout must be responsive (mobile/tablet/desktop), support component registry for dynamic placement, and allow AI to add/remove/rearrange components. Use CSS Grid with proper breakpoints.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "completed",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T011",
+      "name": "Create Component Registry System",
+      "description": "Build component registry that tracks all available UI components, their enabled/disabled state, default sizes, and positions. Must support dynamic component loading, allow AI to enable/disable components via commands, persist component layout preferences, and provide API for querying available components. Include validation for component configurations.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "pending",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T012",
+      "name": "Implement Theme Switcher for AI-Controlled Theming",
+      "description": "Create theme management system that allows AI to switch themes via natural language commands ('switch to dark mode', 'use purple theme'). Must support light/dark modes using data-theme attribute, persist theme preference in localStorage, provide smooth transitions between themes, and expose API for programmatic theme changes. Include theme preview capability.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "pending",
+      "reviewed_status": "pending"
+    },
+    {
+      "id": "T013",
+      "name": "Add Input Suggestions and Autocomplete",
+      "description": "Implement suggestion system for input box that shows context-aware suggestions based on current page, recent commands, and common actions. Suggestions should appear above input box, be keyboard navigable (arrow keys, tab to accept), and update in real-time as user types. Include command history and smart suggestions based on UI context.",
+      "feature": "F001",
+      "component": "UI",
+      "status": "pending",
+      "reviewed_status": "pending"
     }
   ]
 }
-
-# Test comment

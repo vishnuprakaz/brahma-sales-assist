@@ -138,7 +138,7 @@ Agents **MUST update context files** when:
 5.  **Implement Changes:** Write clean, maintainable code following existing conventions and simplicity preferences.
 6.  **Update Context:** Document changes, decisions, and approaches in the relevant context files.
 7.  **Test Implementation:** Test the implementation and verify functionality works as expected.
-8.  **Git Commit (MANDATORY):** Perform a **git commit** with a short, concise, straight-to-the-point commit message. This step is **REQUIRED** before marking task complete.
+8.  **Git Commit (MANDATORY):** Perform a **git commit** with a short, concise, straight-to-the-point commit message should be humanly like short commit. This step is **REQUIRED** before marking task complete.
 9.  **Complete Task:** Mark the task as `completed` in `tasks.json`.
 10. **Update Feature Status:** Update `features.json` if a feature milestone is reached.
 

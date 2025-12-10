@@ -1,4 +1,24 @@
 {
-  "features": []
+  "features": [
+    {
+      "id": "F001",
+      "name": "Natural Language Control",
+      "description": "Users can control the entire application using natural language for navigation, actions, and customization. System tracks UI context (selections, visible data, current page) and sends it with commands to AI agents. AI can navigate pages, manipulate UI components, and provide visual feedback. Includes persistent input box, agent response panel, and real-time processing states.",
+      "status": "planned",
+      "component": "UI",
+      "dependencies": [],
+      "tasks": [
+        "T005",
+        "T006",
+        "T007",
+        "T008",
+        "T009",
+        "T010",
+        "T011",
+        "T012",
+        "T013"
+      ],
+      "reviewed_status": "pending"
+    }
+  ]
 }
-
