@@ -7,9 +7,9 @@ function App() {
       <div className="max-w-4xl mx-auto">
         <Card className="shadow-md">
           <CardHeader>
-            <CardTitle className="text-3xl">Welcome to No-CRM</CardTitle>
+            <CardTitle className="text-3xl">Dashboard</CardTitle>
             <CardDescription className="text-base">
-              Your conversational lead management system is ready to go!
+              Your application is ready to go!
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">

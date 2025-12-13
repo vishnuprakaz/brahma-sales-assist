@@ -55,39 +55,12 @@
       "reviewed_status": "pending"
     },
     {
-      "id": "T007",
-      "name": "Build Agent Response Panel",
-      "description": "Create sliding panel component that appears from right side when AI is active. Must display streaming text responses, show processing indicators, support dynamic UI elements (cards, buttons, charts), be dismissible by user, and minimize to corner when closed. Panel should not block main canvas (overlay or push content). Include proper animations and transitions.",
-      "feature": "F001",
-      "component": "UI",
-      "status": "pending",
-      "reviewed_status": "pending"
-    },
-    {
-      "id": "T008",
-      "name": "Implement Message Service for Agent Communication",
-      "description": "Create service layer that handles sending messages to backend agents and receiving responses. Must attach UI context automatically to every message, handle WebSocket connection for streaming responses, manage connection state (connecting, connected, disconnected), implement retry logic, and provide hooks for components to subscribe to agent messages. Include proper error handling and timeout management.",
-      "feature": "F001",
-      "component": "UI",
-      "status": "pending",
-      "reviewed_status": "pending"
-    },
-    {
-      "id": "T009",
-      "name": "Create Navigation Manager for AI-Controlled Routing",
-      "description": "Build navigation manager that allows AI agents to programmatically navigate the application. Must support commands like 'go to leads', 'show dashboard', 'open settings'. Integrate with React Router, expose API for agent commands, track navigation history, and provide smooth transitions. Should validate navigation targets and handle invalid routes gracefully.",
-      "feature": "F001",
-      "component": "UI",
-      "status": "pending",
-      "reviewed_status": "pending"
-    },
-    {
       "id": "T010",
       "name": "Build Core Layout Structure with Dynamic Grid",
       "description": "Implement main application layout with Header (logo, search, profile), collapsible Sidebar (icon-only navigation), Main Canvas (12-column responsive grid), and proper spacing for Input Box and Agent Panel. Layout must be responsive (mobile/tablet/desktop), support component registry for dynamic placement, and allow AI to add/remove/rearrange components. Use CSS Grid with proper breakpoints.",
       "feature": "F001",
       "component": "UI",
-      "status": "completed",
+      "status": "pending",
       "reviewed_status": "pending"
     },
     {
