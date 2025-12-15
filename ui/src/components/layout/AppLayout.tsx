@@ -66,14 +66,14 @@ export function AppLayout({}: AppLayoutProps) {
       setTimeout(() => {
         setLeftPanelWidth(currentWidth => {
           // Snap behavior based on final position
-          if (currentWidth < 20) {
-            // Dragged far left - snap to show right panel only (0% left = 100% right)
+          if (currentWidth < 50) {
+            // Dragged below 50% - snap to show right panel only (0% left = 100% right)
             return 0;
           } else if (currentWidth > 80) {
             // Dragged far right - snap to show left panel only (100%)
             return 100;
           }
-          // Otherwise keep the dragged position (20-80% range)
+          // Otherwise keep the dragged position (50-80% range)
           return currentWidth;
         });
       }, 0);
@@ -112,12 +112,21 @@ export function AppLayout({}: AppLayoutProps) {
         <div className="flex-1 flex overflow-hidden">
             {/* Left Panel - Main Dynamic Canvas */}
             <div 
-              className="bg-gray-100 overflow-hidden p-4 flex flex-col"
+              className="bg-gray-100 overflow-hidden flex flex-col"
               style={{ 
                 width: `${leftPanelWidth}%`,
-                transition: isDragging ? 'none' : 'width 150ms ease-out'
+                transition: isDragging ? 'none' : 'width 150ms ease-out',
+                padding: leftPanelWidth > 0 ? '1rem 0.5rem 1rem 1rem' : '0'
               }}
             >
+              {/* Inner content wrapper with fixed width for sliding effect */}
+              <div 
+                className="h-full flex flex-col"
+                style={{
+                  width: leftPanelWidth < 50 ? 'calc(50vw - 64px - 1rem)' : '100%',
+                  minWidth: leftPanelWidth < 50 ? 'calc(50vw - 64px - 1rem)' : 'auto'
+                }}
+              >
               {/* Sample Table Card - Full Height */}
               <div className="bg-white rounded-xl shadow-sm flex-1 flex flex-col overflow-hidden">
                 {/* Table Header */}
@@ -173,6 +182,7 @@ export function AppLayout({}: AppLayoutProps) {
                   </table>
                 </div>
               </div>
+              </div>
             </div>
 
           {/* Drag Handle */}
@@ -180,12 +190,21 @@ export function AppLayout({}: AppLayoutProps) {
 
           {/* Right Panel - Agent Panel */}
           <div 
-            className="bg-gray-100 overflow-auto p-6"
+            className="bg-gray-100 overflow-hidden"
             style={{ 
               width: `${100 - leftPanelWidth}%`,
               transition: isDragging ? 'none' : 'width 150ms ease-out'
             }}
           >
+            {/* Inner content wrapper with fixed width for sliding effect */}
+            <div 
+              className="h-full overflow-auto"
+              style={{
+                width: (100 - leftPanelWidth) < 20 ? 'calc(20vw - 64px)' : '100%',
+                minWidth: (100 - leftPanelWidth) < 20 ? 'calc(20vw - 64px)' : 'auto',
+                padding: (100 - leftPanelWidth) > 0 ? '1rem 1rem 1rem 0.5rem' : '0'
+              }}
+            >
             <div className="space-y-6">
               {/* Agent Text Response - Blends with background */}
               <div className="text-sm text-gray-700 leading-relaxed">
@@ -267,6 +286,7 @@ export function AppLayout({}: AppLayoutProps) {
               <div className="text-sm text-gray-700 leading-relaxed">
                 <p>Let me know if you'd like me to dive deeper into any specific lead or metric.</p>
               </div>
+            </div>
             </div>
           </div>
         </div>
